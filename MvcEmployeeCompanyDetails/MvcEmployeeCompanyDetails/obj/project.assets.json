@@ -2921,11 +2921,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\mvc-company-employee-details\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails.csproj",
+      "projectUniqueName": "C:\\Repos\\mvc-employee-company-details\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails.csproj",
       "projectName": "MvcEmployeeCompanyDetails",
-      "projectPath": "C:\\Repos\\mvc-company-employee-details\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails.csproj",
+      "projectPath": "C:\\Repos\\mvc-employee-company-details\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails.csproj",
       "packagesPath": "C:\\Users\\varsha.fernandes\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\mvc-company-employee-details\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails\\obj\\",
+      "outputPath": "C:\\Repos\\mvc-employee-company-details\\MvcEmployeeCompanyDetails\\MvcEmployeeCompanyDetails\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\varsha.fernandes\\AppData\\Roaming\\NuGet\\NuGet.Config",
