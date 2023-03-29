@@ -151,7 +151,7 @@ namespace MvcEmployeeCompanyDetails.Repository
                 }
                     );
 
-                return  companies.Distinct().ToList();
+                return  companyDictionary.Values.ToList();
             }
         }
 
