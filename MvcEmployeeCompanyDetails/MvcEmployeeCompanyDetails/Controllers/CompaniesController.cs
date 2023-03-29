@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MvcEmployeeCompanyDetails.Contracts;
 using MvcEmployeeCompanyDetails.Dto;
+using MvcEmployeeCompanyDetails.Entities;
 
 namespace MvcEmployeeCompanyDetails.Controllers
 {
@@ -79,6 +80,74 @@ namespace MvcEmployeeCompanyDetails.Controllers
             }
             catch (Exception ex)
             {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet("ByEmployeeId/{Id}")]
+        public async Task<IActionResult> GetCompanyByEmployeeId(int id)
+        {
+            try
+            {
+                var company = await _companyRepo.GetCompanyByEmployeeId(id);
+                if (company == null)
+                    return NotFound();
+
+                return Ok(company);
+            }
+            catch (Exception ex)
+            {
+                //log error
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet("{id}/MultipleResult")]
+
+        public async Task<IActionResult> GetCompanyEmployeesMultipleResult(int id)
+        {
+            try
+            {
+                var company = await _companyRepo.GetCompanyEmployeesMultipleResults(id);
+                if(company == null)
+                    return NotFound();
+
+                return Ok(company);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet("MultipleMapping")]
+        public async Task<IActionResult> GetCompaniesEmployeesMultipleMapping()
+        {
+            try
+            {
+                var company = await _companyRepo.GetCompaniesEmployeesMultipleMapping();
+
+                return Ok(company);
+            }
+            catch (Exception ex)
+            {
+                //log error
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost("Multiple")]
+        public async Task<IActionResult> CreateMultipleCompanies(List<CompanyForCreationDto> companies)
+        {
+            try
+            {
+                await _companyRepo.CreateMultipleCompanies(companies);
+
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+                //log error
                 return StatusCode(500, ex.Message);
             }
         }
