@@ -15,6 +15,7 @@ namespace MvcEmployeeCompanyDetails.Controllers
         {
             _companyRepo = companyRepo;
         }
+
         [HttpGet("{id}", Name = "CompanyById")]
         public async Task<IActionResult> GetCompany(int id)
         {
@@ -103,7 +104,6 @@ namespace MvcEmployeeCompanyDetails.Controllers
         }
 
         [HttpGet("{id}/MultipleResult")]
-
         public async Task<IActionResult> GetCompanyEmployeesMultipleResult(int id)
         {
             try
